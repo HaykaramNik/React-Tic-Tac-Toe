@@ -1,3 +1,5 @@
+import styles from './History.module.scss'
+
 interface Props {
   history: (string | null)[][];
   readonly move: number;
@@ -8,7 +10,7 @@ function History(props: Props) {
   const { history, move, jumpTo } = props;
 
   return (
-    <ol>
+    <ol className={styles.list}>
       {history.map((squares: Array<string | null>, move: number) => {
         let description;
         if (move > 0) {
@@ -17,7 +19,7 @@ function History(props: Props) {
           description = 'Go to game start';
         }
         return (
-          <li key={move}>
+          <li key={move} className={styles.list__item}>
             <button onClick={() => jumpTo(move)}>{description}</button>
           </li>
         );

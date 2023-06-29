@@ -1,6 +1,7 @@
 import Board from './components/Board';
 import History from './components/History';
 import { useState } from 'react';
+import styles from './Game.module.scss';
 
 function Game() {
   const [xIsNext, setXIsNext]: [boolean, Function] = useState(true);
@@ -23,11 +24,11 @@ function Game() {
   }
 
   return (
-    <div className="game">
-      <div className="game-board">
+    <div className={styles.game}>
+      <div className={styles.game__board}>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-      <div className="game-info">
+      <div className={styles.game__info}>
         <History history={history} move={currentMove} jumpTo={jumpTo} />
       </div>
     </div>

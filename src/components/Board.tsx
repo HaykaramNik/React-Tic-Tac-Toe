@@ -36,7 +36,7 @@ function Board(props: Props) {
 
   return (
     <>
-      <div className="status">{status}</div>
+      <div className={styles.header}>{status}</div>
       <div className={styles.boardRow}>
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />

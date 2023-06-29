@@ -1,4 +1,11 @@
 .boardRow {
   width: 60px;
   height: 20px;
+  display: flex;
+  border: 1px solid black;
+}
+
+.header {
+  width: 100px;
+  margin-bottom: 10px;
 }

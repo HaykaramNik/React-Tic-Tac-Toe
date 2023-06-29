@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    button {
+      width: 200px;
+    }
+  }
+}
